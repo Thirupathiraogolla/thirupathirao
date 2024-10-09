@@ -45,6 +45,6 @@ A: select empname from employee;
 # i want the details. who salary is grater than the 150000 and empname start with 't'
 A: select * from employee where salary >=150000 
                             and empname like 't%';
-
+A
 
 
