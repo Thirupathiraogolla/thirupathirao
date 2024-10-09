@@ -1,0 +1,50 @@
+#how many data types is there in mysql
+int
+big int
+medium int
+tiny int
+float
+char
+varchar
+text 
+enum
+double
+decimal
+# 2) In mysql how many commands id there 
+A: there 5 types of the commands
+1) DDL (data defination languge):
+  i)   create
+  II)  alter
+  iii) drop
+  iv)  truncate
+  v)   Rename
+2) DML (data mainpulastion languge)
+  i)   insert
+  ii)  delete
+  iii) update
+3) TCL (transation control languge)
+  i)   commit
+  ii)  sava point
+  iii) rollback
+4) DCL (data control languge
+  i)  grant
+  ii) revoke
+5) DQl (data query language)
+  i) select
+#============================================INTERVIEW question ===========================================
+# create a employee table 
+a: create table employee (eno int , empname varchar(20), salary int,address varchar(20),join_date date);
+# show the all employee details
+A:select * from employee ;
+# how to insert the data into the employee table
+A: insert into employee values(1,'Thiru',150000,'Guntur','2024-11-23');
+#how to change the name thiru to venkat in employee table
+A: update employee set empname = 'venkat' where empno= 1;
+# show the names only in the employee table
+A: select empname from employee;
+# i want the details. who salary is grater than the 150000 and empname start with 't'
+A: select * from employee where salary >=150000 
+                            and empname like 't%';
+
+
+
