@@ -1,0 +1,68 @@
+'''class List:
+    def __init__(self,li):
+        self.li = li
+    def main_function(self):
+        first = self.li[0]
+        second = self.li[1]
+        for i in self.li:
+            if i > first:
+                first = i
+            if i > second and i!= first:
+                second = i
+        print('end of the program')
+        return first,second
+
+list_values = [100,0,2,5,3,16,15,7]
+obj = List(list_values)
+print(obj.main_function()) '''
+
+# find the index of the given element in list
+'''class Index:
+    def __init__(self,li):
+        self.li = li
+    def main_logic(self):
+        ele = int(input('enter a numer: '))
+        if ele in self.li:
+            for i in range(len(self.li)):
+                if self.li[i] == ele:
+                    yield self.li[i],i
+        else:
+            yield 'the element is not found'
+
+list_values = [10,20,30,40,10,30,20,10]
+obj = Index(list_values)
+res= obj.main_logic()
+print(res)   
+for ch in res:
+    print(ch)'''
+
+'''class Index:
+    def __init__(self,li):
+        self.li = li
+    def main_logic (self):
+        ele = input('enter a element: ')
+        
+        for i in range(len(self.li)):
+               
+            if str(self.li[i]) == ele:
+                yield self.li[i],i
+        
+list_values = [10,20,10,'thiru',20,10]
+obj = Index(list_values)
+res = obj.main_logic()
+for i in res:
+    print(i) '''
+#shallow copy: when your copying the one obj into another obj  by assigment operator 
+# both address refress to the same address location.
+x=[1,2,3]
+y=x
+print(id(x))
+print(id(y))
+print(id(x[1]))
+print(id(y[1]))
+y.append(100)
+print(x)
+print(y)
+
+                
+
