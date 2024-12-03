@@ -1,0 +1,24 @@
+rowes =int(input('enter a number; '))
+i=0
+space = ' '
+while i<=rowes:
+    acode = 65
+    j=0
+    print(space*(rowes-i),end='')
+    while j<=i:
+        print(chr(acode+j),end=' ')
+        j+=1
+    print()    
+    acode = 65
+    i+=1
+
+#output:
+ enter a number; 5
+     A 
+    A B 
+   A B C 
+  A B C D 
+ A B C D E 
+A B C D E F 
+
+        
