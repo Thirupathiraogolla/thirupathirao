@@ -1,5 +1,121 @@
+#check given number is postive number are not
 num=int(input ('enter  a number:'))
 if num>0:
   print('postitve')
 else:
   print('negative')
+===========================================
+#check the given number is perfect square are not
+num =int(input('enter a number: '))
+i=1
+while i**3<=num:
+    if i**3 == num:
+        print(f'it is perfect square number')
+        break
+    i+=1    
+else:
+    print('it is not perfectsquare number')
+===========================================
+#given number is prime number are not
+num =int(input('enter a number: '))
+i=1
+cnt=0
+while i <= num:
+    if num % i == 0:
+        cnt+=1
+    i+=1
+if cnt==2:
+    print(f'it is prime number {num}')
+else:
+    print('it is not prime number')
+===========================================
+# print the 1 to 100 prime number by using while loop
+num =1 
+while num<=100:
+    i=1
+    cnt=0
+    while i<=(num//2)+1:
+        if num % i ==0:
+            cnt+=1
+        i+=1
+    if cnt==1:
+        print(num)
+    num+=1   
+===========================================
+#n th prime number:
+n =int(input('enter a number: '))
+num =1
+d_cnt=0
+while True:
+    i=1
+    cnt=0
+    while num>= i:
+        if num % i ==0 :
+            cnt+=1
+        i += 1
+    if cnt == 2:
+        
+        d_cnt +=1
+    if d_cnt == n:
+        print(f'it is prime number {num}')
+        break
+    num+=1
+===========================================
+# given number is pallndrom are not without using any method
+num =int(input('enter a number: '))
+p=0
+bkp = num
+while 0 < num :
+    t = num % 10
+    p = p*10+t
+    num //= 10
+if bkp == p:
+    print(f'it is pallandrom number')
+else:
+    print(f'it is not palladrom number')
+# it while be working on intger numbers only
+===========================================
+#sum digits of the given number 
+num = int(input('enter a number: '))
+
+s = 0
+while 0<num:
+    t = num%10
+    s += t
+    num //= 10
+print(s)
+===========================================
+# sum even digit count in givrn number up single digit number.
+num = int(input('enter a number: '))
+while True:
+    cnt=0
+    s=0
+    while 0<num:
+        t = num %10
+        cnt +=1
+        if cnt %2 ==0:
+            s += t
+        num //= 10    
+    if s>9:
+        num =s
+    else:   
+        print(s)
+        break
+============================================
+# check if character is vowel or a consonant 
+s = input('enter a string: ')
+i= 0
+vowel_cnt =0
+conson_cnt =0 
+while i<=len(s)-1:
+    if s[i] in 'aeiou':
+        vowel_cnt +=1
+    else:
+        conson_cnt +=1
+        
+    i+=1
+if vowel_cnt > conson_cnt:
+    print(f'majarity of the vowels here {vowel_cnt}')
+else:
+    print(f'majarity of the conson here{conson_cnt}')
+============================================
