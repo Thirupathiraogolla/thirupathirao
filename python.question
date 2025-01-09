@@ -119,3 +119,136 @@ if vowel_cnt > conson_cnt:
 else:
     print(f'majarity of the conson here{conson_cnt}')
 ============================================
+# max value in the given list.
+'''x =[1,2,3,1,1,56,44]
+first_value = 0
+second_value =1
+for i in x:
+    if first_value < i:
+        first_value = i
+    if second_value < i and i != first_value:
+        second_value =i
+print(first_value,second_value) 
+=================================================== '''
+# rotations of the in the list:
+while True:
+    print('1. right_rotation')
+    print('2. left_rotation')
+    print('3.exit')
+    li =[10,20,30,40,50,60]
+    output =[]
+    ch = int(input('choose the one number: '))
+    if ch == 1:
+        
+        ele = int(input('enter a element:'))
+        if ele in li:
+            idx = li.index(ele)
+            output.extend(li[idx+1:])
+            output.extend (li [:idx+1])
+            print(output)
+            
+        else:
+            print('the element is not their in list')
+    elif ch == 2:
+        ele = int(input('enter a element: '))
+        if ele in li:
+            idx = li.index(ele)
+            output.extend(li[idx-1::-1])
+            output.extend (li[ :idx-1 :-1])
+            print(output)
+        else:
+            print('the element is not found in list')
+    else:
+        exit =input('do want to exit (yes/no:')
+        if exit == 'yes':
+            print('end of the program')
+            break
+    output =[] 
+    =============================================
+# sorting:there are two type of the sorting is there one commmon and private
+li = [10,20,30,4,3,2,1]
+res = sorted(x)
+print(res)
+
+li.sort(reverse = True)
+print(li) 
+#without using the sorting.
+li = [1,10,20,30,4,3,2,1]
+
+for i in range (0,len(li)):
+    min_value = min(li[i:])
+    idx = li[i:].index(min_value)+i
+    li [idx] , li[i] = li[i],li[idx]
+print(li) # ascending order
+res =reversed(li) # descending order
+for i in res:
+    print(i)
+==============================================================================
+#stack :(LIFO)
+
+stack =[]
+while True:
+    print('1.add')
+    print('2.remove')
+    print('3.tremanted')
+    print('4. exit')
+    ch =int(input('enter a element: '))
+    if ch == 1 :
+        ele =int(input('enter a value: '))
+        stack.append(ele)
+    elif ch == 2:
+        
+        stack.remove(stack[0])
+    elif ch == 3:
+        print('*'*10)
+        for i in stack:
+            print(i,end=' ')
+        print() 
+    else:
+        exit = input('Do want to stop (yes/no):')
+        if exit ==  "yes":
+            print('end of the adding or removeing')
+        break
+==================================================================
+        #Queue :(FIFO)
+Queue =[]
+while True:
+    print('1.add')
+    print('2.remove')
+    print('3.treverse')
+    print('4.exit')
+    ch = int(input('choose the one value: '))
+    if ch == 1:
+        print('1.intger')
+        print('2.str')
+        print('3.blooen')
+        print('4.complex')
+        print('5.float')
+        ch = int(input('choose the datatype:'))
+        if ch ==1:
+            ele = int(input('enter a element'))
+        elif ch == 2:
+            ele =input('enter a string: ')
+        elif ch == 3:
+            ele =input('enter a element :')
+        elif ch == 4:
+            ele = complex(input('enter a complexvalue'))
+        else:
+            ele = float(input('enter a element: '))
+        Queue.append(ele)
+    elif ch ==2 :
+        Queue.pop()
+    elif ch == 3:
+        print('*'*10)
+        for i in Queue:
+            print(i,end= ' ')
+        print()
+    else:
+        exit = input('enter a value: ')
+        if exit ==  "yes":
+            print('Exit')
+            break
+==============================================================================
+        
+        
+
