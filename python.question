@@ -249,6 +249,14 @@ while True:
             print('Exit')
             break
 ==============================================================================
-        
+# decimal number to roman numbers.
+decimal =[10,9,5,4,1]
+roman = ['X','IX','V','IV','I']
+ele = int(input('enter a element: ')
+for i in decimal:
+    q = ele//i
+    idx = decimal.index(i)
+    print(roman[idx]*q)
+    ele%=i
         
 
