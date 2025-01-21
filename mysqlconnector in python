@@ -1,0 +1,47 @@
+
+import pymysql
+
+
+connection = pymysql.connect(
+    host='localhost',
+    user='your_username',
+    password='your_password',
+    database='your_database'
+)
+
+try:
+    with connection.cursor() as cursor:
+        # Create table
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS Students (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(100) NOT NULL,
+            age INT NOT NULL,
+            grade VARCHAR(10)
+        );
+        """)
+        print("Table created.")
+
+        # Insert data
+        cursor.execute("INSERT INTO Students (name, age, grade) VALUES (%s, %s, %s);", ('John Doe', 20, 'A'))
+        print("Data inserted.")
+
+      
+        cursor.execute("SELECT * FROM Students;")
+        for row in cursor.fetchall():
+            print(row)
+        cursor.execute("UPDATE Students SET grade = %s WHERE name = %s;", ('A+', 'John Doe'))
+        print("Data updated.")
+
+        # Delete data
+        cursor.execute("DELETE FROM Students WHERE name = %s;", ('John Doe',))
+        print("Data deleted.")
+
+        # Drop table
+        cursor.execute("DROP TABLE IF EXISTS Students;")
+        print("Table dropped.")
+
+    connection.commit()
+finally:
+    connection.close()
+    print("MySQL connection closed.")
