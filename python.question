@@ -258,5 +258,34 @@ for i in decimal:
     idx = decimal.index(i)
     print(roman[idx]*q)
     ele%=i
-        
+========================================================================================
+'''method overriding : same pic of code with two method are the same but parmeters are different.
+ --> in python method overriding is not there
+ --> there will be providing the arugments.'''
+'''def addition(*arug):
+    c = sum(arug)
+    return f'total sum of the number is {c}'
+
+print(addition(10,20,30,0.4,50)) '''
+
+#positional arguments
+def uname(name,age):
+    res = ''' user name is {} and his age is{}'''.format(name,age)
+    return res
+print(uname(34,'thiru'))
+
+#keyword arguments:
+def username(name,age):
+    return f'user name is {name} and is his age is {age}'
+print(username(age=34,name='thiru'))  
+
+#Dictionary arguments
+def usname(**kwargs):
+    kwargs.update(education='Bachelor of technology')
+    return kwargs
+    
+print(usname(name='thiru',age='34',gender='Male'))  
+
+
+        =============================================================
 
